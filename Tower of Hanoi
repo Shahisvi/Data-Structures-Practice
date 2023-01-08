@@ -1,0 +1,13 @@
+#DSAOne
+
+public void POH(int n, String from_rod, String to_rod, String aux_rod){
+  if(n==0){
+    return;
+  }
+  POH(n-1, "A","B","C");
+  System.out.println("Moved rod"+n+ from A to C");
+  POH(n-1, "B", "C","A");
+
+}
+
+Complexity - 2^N
