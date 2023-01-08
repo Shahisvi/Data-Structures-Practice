@@ -1,4 +1,5 @@
 #DSAOne
+Recursive- 
 
 public void TOH(int n, String from_rod, String to_rod, String aux_rod){
   if(n==0){
@@ -11,3 +12,43 @@ public void TOH(int n, String from_rod, String to_rod, String aux_rod){
 }
 
 Complexity - 2^N
+
+Iterative
+
+total number of steps == pow(2,N) -1
+
+public void TOH(int n, String from_rod, String to_rod, String aux_rod){
+
+  int steps = pow(2,n) -1;
+  for(int i=0;i<=steps;i++){
+    if(n%2==0) //even discs
+    {
+      if(i%3 ==1){
+        move(source,aux_rod)
+      } 
+      if(i%3==2){
+              move(from_rod,to_rod)
+      }
+      else{
+          move(aux_rod,to_rod)
+      }
+    }
+    else{
+     if(i%3 ==1){
+        move(source,to_rod)
+      } 
+      if(i%3==2){
+              move(from_rod,aux_rod)
+      }
+      else{
+          move(to_rod,aux_rod)
+      }
+    }
+  }
+  
+  System.out.println("Moved rod"+n+ from A to C");
+}
+
+Complexity - n 
+space O(N)
+
